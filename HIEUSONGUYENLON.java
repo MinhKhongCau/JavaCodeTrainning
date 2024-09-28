@@ -21,14 +21,16 @@ public class HIEUSONGUYENLON {
                 for (int i = 0; i < n; i++) {
                     String in1 = sc.next(), in2 = sc.next();
                     if (in1.length() >= 0 && in1.length() <= 1000 && in2.length()>= 0 && in2.length() <= 1000) {
-                        int int1 = Integer.parseInt(in1), int2 = Integer.parseInt(in2);
-                        int length = Math.max(in1.length(), in2.length());
-                        String format = "%0"+length+"d";
-                        if (int1<int2) {
-                            rel.add(String.format(format, int2-int1));
+                        String res = "";
+                        // balance array
+                        if (in1.length() < in2.length() ) {
+                            in1 = balance(in1, in2.length());
+                            res = negative2Number(in2, in1);
                         } else {
-                            rel.add(String.format(format, int1-int2));
+                            in2 = balance(in2, in1.length());
+                            res = negative2Number(in1, in2);
                         }
+                        rel.add(res);
                     }
                 }
                 for (String item: rel) {
@@ -37,4 +39,34 @@ public class HIEUSONGUYENLON {
             }
         }
     }
+
+    public static String balance (String A, int length) {
+        int temp = length - A.length();
+        while (temp > 0) {
+            A = "0" + A;
+            temp--;
+        }
+        return A;
+    }
+
+    public static String negative2Number (String num1, String num2) {
+        String res = "";
+        Integer carry = 0;
+        for (int j = num1.length() - 1; j >= 0; j--) {
+            int d = (num1.charAt(j) - '0') - (num2.charAt(j) - '0') - carry;
+            if (d < 0) {
+                d += 10;
+                carry = 1;
+            } else {
+                carry = 0;
+            }
+            res = (char) (d + '0') + res;
+        }
+        return res;
+    }
 }
+/*
+ * 187
+ * 121
+ * 4
+ */

@@ -9,18 +9,19 @@ import java.util.Scanner;
 */
 public class SONGUYENTO {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
-        while (n!=0) {
-            if (n>0 && n<100000000) {
-                int x = sc.nextInt();
-                if (songuyento(x)) {
-                    System.out.println("YES");
-                } else {
-                    System.out.println("NO");
+        try (Scanner sc = new Scanner(System.in)) {
+            int n = sc.nextInt();
+            while (n!=0) {
+                if (n>0 && n<100000000) {
+                    int x = sc.nextInt();
+                    if (songuyento(x)) {
+                        System.out.println("YES");
+                    } else {
+                        System.out.println("NO");
+                    }
                 }
+                n--;
             }
-            n--;
         }
     }
 
