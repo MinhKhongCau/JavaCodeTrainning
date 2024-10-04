@@ -29,7 +29,6 @@ public class HOPCUA2DAYSO {
     }
 
     private static TreeSet<Integer> timHop(TreeSet<Integer> A, TreeSet<Integer> B) {
-        // TODO Auto-generated method stub
         TreeSet<Integer> rel = new TreeSet<>();
         Iterator<Integer> itrA = A.iterator(), itrB = B.iterator();
         Integer tA = itrA.next(), tB = itrB.next();

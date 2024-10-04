@@ -24,6 +24,7 @@ public class Pair {
             if (n >= 1 && n <= 100) {
                 while (n>0) {
                     int test = sc.nextInt();
+                    sc.nextLine();
                     if (test <= 100000 && test >= 1) {
                         int sumPrime = sumPrime(test);
                         if (sumPrime != -1) {
@@ -36,6 +37,8 @@ public class Pair {
                     }
                     n--;
                 }
+            } else {
+                System.out.println(-1);
             }
         }
     }

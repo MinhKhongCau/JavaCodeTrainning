@@ -35,7 +35,6 @@ Ghi ra các số khác nhau và số lần xuất hiện theo thứ tự tăng d
                 System.out.println(item.getKey()+" "+item.getValue());
             }
         } catch (FileNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
 

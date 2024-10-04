@@ -63,7 +63,6 @@ public class THOIGIAN {
             rel.sort(new Comparator<THOIGIAN>() {
                 @Override
                 public int compare(THOIGIAN o1, THOIGIAN o2) {
-                    // TODO Auto-generated method stub
                     if (o1.getHour() > o2.getHour()) {
                         return 1;
                     } else if (o1.getHour() < o2.getHour()) {
