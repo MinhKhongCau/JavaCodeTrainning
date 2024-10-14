@@ -15,8 +15,10 @@ public class leapYear {
             } else {
                 bool = false;
             }
-
-            System.out.println(bool);
+            if (bool)
+                System.out.println("True");
+            else 
+                System.out.println("False");
         }
     }
 }
