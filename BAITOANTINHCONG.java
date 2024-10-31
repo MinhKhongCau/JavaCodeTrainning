@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 
 class NhanVien{
@@ -60,31 +59,14 @@ class NhanVien{
         return ma+" "+ten+" "+getLuongThang()+" "+getThuong()+" "+getPhuCap()+" "+thuNhap();
     }
 }
-public class TINHCONG {
+public class BAITOANTINHCONG {
     public static void main(String[] args) {
         Scanner sc=new Scanner(System.in);
-        ArrayList<NhanVien> list=new ArrayList<>();
-        int n=sc.nextInt();
-        String tmp=sc.nextLine();
-        for (int i = 0; i < n; i++) {              
-            String ten=sc.nextLine();
-            int luongCoBan=Integer.parseInt(sc.nextLine());
-            int soNgayCong=Integer.parseInt(sc.nextLine());
-            String chucVu=sc.nextLine();
-            NhanVien nv=new NhanVien(ten, luongCoBan, soNgayCong, chucVu);
-            list.add(nv);
-        }
-//        list.sort(new Comparator<NhanVien>(){
-//            @Override
-//            public int compare(NhanVien o1, NhanVien o2) {
-//                return o2.thuNhap()-o1.thuNhap();
-//            }
-//            
-//        });
-        for(NhanVien a:list){
-            System.out.println(a);
-        }    
-        sc.close();
-            
+        String ten=sc.nextLine();
+        int luongCoBan=Integer.parseInt(sc.nextLine());
+        int soNgayCong=Integer.parseInt(sc.nextLine());
+        String chucVu=sc.nextLine();
+        NhanVien nv=new NhanVien(ten, luongCoBan, soNgayCong, chucVu);
+        System.out.print(nv);
     }
 }

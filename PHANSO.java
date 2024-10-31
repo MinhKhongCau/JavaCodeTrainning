@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PHANSO {
+class PHANSO {
     private Integer numerator;
     private Integer denominator;
     public PHANSO(Integer numerator, Integer denominator) {
