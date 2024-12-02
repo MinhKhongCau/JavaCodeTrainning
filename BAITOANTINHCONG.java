@@ -1,5 +1,17 @@
 import java.util.Scanner;
 
+public class BAITOANTINHCONG {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        String ten=sc.nextLine();
+        int luongCoBan=Integer.parseInt(sc.nextLine());
+        int soNgayCong=Integer.parseInt(sc.nextLine());
+        String chucVu=sc.nextLine();
+        NhanVien nv=new NhanVien(ten, luongCoBan, soNgayCong, chucVu);
+        System.out.print(nv);
+    }
+}
+
 class NhanVien{
     private static int stt=1;
     private String ma;
@@ -57,16 +69,5 @@ class NhanVien{
     @Override
     public String toString() {
         return ma+" "+ten+" "+getLuongThang()+" "+getThuong()+" "+getPhuCap()+" "+thuNhap();
-    }
-}
-public class BAITOANTINHCONG {
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-        String ten=sc.nextLine();
-        int luongCoBan=Integer.parseInt(sc.nextLine());
-        int soNgayCong=Integer.parseInt(sc.nextLine());
-        String chucVu=sc.nextLine();
-        NhanVien nv=new NhanVien(ten, luongCoBan, soNgayCong, chucVu);
-        System.out.print(nv);
     }
 }

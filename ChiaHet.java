@@ -12,22 +12,18 @@ public class ChiaHet {
                 max=ss[0]; min=ss[1];
             }else if(ss[0].length()<ss[1].length()){
                 max=ss[1]; min=ss[0];
-            }else{
-                for (int j = 0; j < ss[1].length(); j++) {
-                    if(ss[0].charAt(j)>ss[1].charAt(j)){
-                       max=ss[0]; min=ss[1]; break;
-                    }else if(ss[0].charAt(j)<ss[1].charAt(j)){
-                        max=ss[1]; min=ss[0]; break;
-                    }else{
-                        continue;
-                    }
-                }
             }
-            if(Integer.parseInt(max)%Integer.parseInt(min)==0){
+            int reset = 0;
+            int m = Integer.parseInt(min);
+            for (char item : max.toCharArray()) {
+                reset = (reset*10 + Integer.parseInt(String.valueOf(item))) % m;
+            }
+            if (reset == 0) {
                 System.out.println("YES");
-            }else{
+            } else {
                 System.out.println("NO");
             }
         }
+        sc.close();
     }
 }
